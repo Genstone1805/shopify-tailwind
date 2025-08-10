@@ -1,0 +1,40 @@
+<div
+  id="sideNav"
+  class="tw:fixed tw:h-full tw:z-50 tw:top-0 tw:w-[350px] tw:bottom-0 tw:lg:hidden tw:right-0 tw:translate-x-full tw:bg-black tw:p-6 tw:transition-transform tw:duration-300 tw:ease-in-out"
+>
+  <div class="tw:w-full tw:relative">
+    <button id="closeButton" class="text-(--tc) tw:flex tw:justify-end tw:cursor-pointer tw:w-full tw:p-3">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243"/>
+      </svg>
+    </button>
+    <div>
+      <nav class="tw:flex tw:items-start tw:space-y-3 tw:flex-col tw:space-x-6 tw:text-lg tw:justify-start tw:font-medium">
+        {% for link in section.settings.menu.links %}
+          <a
+            href="{{link.url}}"
+            class="hover:tw:text-[#5cf2f2] tw:uppercase tw:font-medium tw:hover:border-b-2 tw:border-(--sc) {% if link.url == request.path %} tw:text-(--sc) {% endif %} tw:transition-colors tw:duration-300 tw:ease-in tw:hover:text-(--sc)"
+          >
+            {{- link.title -}}
+          </a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var sideNav = document.getElementById('sideNav');
+    var openButton = document.getElementById('openButton');
+    var closeButton = document.getElementById('closeButton');
+
+    openButton.addEventListener('click', function () {
+      sideNav.classList.remove('tw:translate-x-full');
+    });
+
+    closeButton.addEventListener('click', function () {
+      sideNav.classList.add('tw:translate-x-full');
+    });
+  });
+</script>

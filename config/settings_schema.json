@@ -34,6 +34,64 @@
     ]
   },
   {
+    "name": "Custom Colours",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bc",
+        "label": "Background color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "tc",
+        "label": "Text Colour",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "pc",
+        "label": "Primary Text Colour",
+        "default": "#59efee"
+      },
+      {
+        "type": "color",
+        "id": "sc",
+        "label": "Secondary text Colour",
+        "default": "#fe9ff1"
+      },
+      {
+        "type": "color",
+        "id": "mtpc",
+        "label": "Muted Primary Text Colour",
+        "default": "#6bc7c6"
+      },
+      {
+        "type": "color",
+        "id": "mtsc",
+        "label": "Muted Secondary text Colour",
+        "default": "#c982c0"
+      }
+    ]
+  },
+  {
+  "name": "Custom Font",
+  "settings": [
+    {
+      "type": "font_picker",
+      "id": "pf",
+      "label": "Primary Font",
+      "default": "assistant_n4"
+    },
+    {
+      "type": "font_picker",
+      "id": "sf",
+      "label": "Secondary Font",
+      "default": "assistant_n4"
+    }
+  ]
+},
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {

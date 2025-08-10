@@ -296,6 +296,23 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    {{ 'app-production.css' | asset_url | stylesheet_tag }}
+
+    <style>
+      :root {
+        --bc: {{ settings.bc }};
+        --tc: {{ settings.tc }};
+        --pc: {{ settings.pc }};
+        --sc: {{ settings.sc }};
+        --mtpc: {{ settings.mtpc }};
+        --mtsc: {{ settings.mtsc }};
+
+        /* Font variables */
+        --pf: {{ settings.pf.family | json }};
+        --sf: {{ settings.sf.family | json }};
+      }
+    </style>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">

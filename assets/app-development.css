@@ -1,0 +1,17 @@
+@import "tailwindcss" prefix(tw) important;
+@import 'tailwind-scrollbar-hide/v4';
+
+
+@layer base {
+
+   html {
+    font-size: 16px !important;
+  }
+
+  .page-width {
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+
+  }
