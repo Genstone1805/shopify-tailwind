@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tw": "px @tailwindcss/cli -i ./assets/app-development.css -o ./assets/app-production.css --watch",
+    "shopify": "shopify theme dev --store store_url",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
